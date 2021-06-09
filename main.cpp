@@ -1,26 +1,19 @@
-#include <array>
-#include <cstdint>
-#include <iostream>
-#include "Sha1.h"
 #include "MD5.h"
-using namespace std;
+#include "Sha1.h"
 
+using namespace std;
 
 
 int main(){
 
-    std::string data = "Hello World";
+    Sha1 *sha1 = new Sha1;
+    cout << "Algoritmo sha1 con un Hola mundo";
+    sha1->AlgSha1("hola mundo");
 
+    cout << "Algoritmo md5 con un Hola mundo";
+    MD5 *md5 = new MD5("hola mundo");
 
-    std::string data_hex_digest;
-
-    MD5 *hash = new MD5;
-    hash->update(data.begin(), data.end());
-    hash->hex_digest(data_hex_digest);
-
-    std::cout << data_hex_digest << std::endl;
 
 
     return 0;
-
 }

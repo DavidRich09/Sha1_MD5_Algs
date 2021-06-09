@@ -141,6 +141,33 @@ ExtraClase4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ExtraClase4.dir\build.make CMakeFiles/ExtraClase4.dir/build
 .PHONY : ExtraClase4/fast
 
+MD5.obj: MD5.cpp.obj
+
+.PHONY : MD5.obj
+
+# target to build an object file
+MD5.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ExtraClase4.dir\build.make CMakeFiles/ExtraClase4.dir/MD5.cpp.obj
+.PHONY : MD5.cpp.obj
+
+MD5.i: MD5.cpp.i
+
+.PHONY : MD5.i
+
+# target to preprocess a source file
+MD5.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ExtraClase4.dir\build.make CMakeFiles/ExtraClase4.dir/MD5.cpp.i
+.PHONY : MD5.cpp.i
+
+MD5.s: MD5.cpp.s
+
+.PHONY : MD5.s
+
+# target to generate assembly for a file
+MD5.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ExtraClase4.dir\build.make CMakeFiles/ExtraClase4.dir/MD5.cpp.s
+.PHONY : MD5.cpp.s
+
 Sha1.obj: Sha1.cpp.obj
 
 .PHONY : Sha1.obj
@@ -204,6 +231,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ExtraClase4
+	@echo ... MD5.obj
+	@echo ... MD5.i
+	@echo ... MD5.s
 	@echo ... Sha1.obj
 	@echo ... Sha1.i
 	@echo ... Sha1.s

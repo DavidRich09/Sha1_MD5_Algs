@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
-D:/Proyectos/C++/ExtraClase4/Sha1.cpp
-Sha1.h
-D:/Proyectos/C++/ExtraClase4/Sha1.h
+D:/Proyectos/C++/ExtraClase4/MD5.cpp
+MD5.h
+D:/Proyectos/C++/ExtraClase4/MD5.h
+
+D:/Proyectos/C++/ExtraClase4/MD5.h
+iostream
+-
+cstring
+-
+vector
+-
 
 D:/Proyectos/C++/ExtraClase4/Sha1.h
 iostream
@@ -19,14 +27,8 @@ string
 -
 
 D:/Proyectos/C++/ExtraClase4/main.cpp
-array
--
-iterator
--
-cstdint
--
-iostream
--
+MD5.h
+D:/Proyectos/C++/ExtraClase4/MD5.h
 Sha1.h
 D:/Proyectos/C++/ExtraClase4/Sha1.h
 

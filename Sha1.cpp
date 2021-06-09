@@ -8,7 +8,7 @@ int Sha1::S(unsigned int x, int n) {
     return x >> (32 - n) | (x << n);
 }
 
-void Sha1::append(string m) {
+void Sha1::Agregar(string m) {
     Turn = (m.size() + 8) / 64 + 1;
     X.resize(Turn * 64);
     int i = 0;
@@ -27,7 +27,7 @@ void Sha1::append(string m) {
     }
 }
 
-void Sha1::setW(vector<int> m, int n) {
+void Sha1::SetW(vector<int> m, int n) {
     n *= 64;
     for (int i = 0; i < 16; i++) {
         W[i] = (m[n + 4 * i] << 24) + (m[n + 4 * i + 1] << 16)
@@ -38,7 +38,7 @@ void Sha1::setW(vector<int> m, int n) {
     }
 }
 
-int Sha1::Kt(int t) {
+int Sha1::GetK(int t) {
     if (t < 20)
         return 0x5a827999;
     else if (t < 40)
@@ -49,7 +49,7 @@ int Sha1::Kt(int t) {
         return 0xca62c1d6;
 }
 
-int Sha1::ft(int t) {
+int Sha1::GetT(int t) {
     if (t < 20)
         return (B & C) | ((~B) & D);
     else if (t < 40)
@@ -66,11 +66,11 @@ void Sha1::AlgSha1(string text) {
     C1 = C = 0x98badcfe;
     D1 = D = 0x10325476;
     E1 = E = 0xc3d2e1f0;
-    append(text);
+    Agregar(text);
     for (int i = 0; i < Turn; i++) {
-        setW(X, i);
+        SetW(X, i);
         for (int t = 0; t < 80; t++) {
-            int temp = E + ft(t) + S(A, 5) + W[t] + Kt(t);
+            int temp = E + GetT(t) + S(A, 5) + W[t] + GetK(t);
             E = D;
             D = C;
             C = S(B, 30);
