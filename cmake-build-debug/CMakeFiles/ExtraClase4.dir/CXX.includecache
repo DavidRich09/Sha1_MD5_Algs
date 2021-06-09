@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Proyectos/C++/ExtraClase4/Sha1.cpp
+Sha1.h
+D:/Proyectos/C++/ExtraClase4/Sha1.h
+
+D:/Proyectos/C++/ExtraClase4/Sha1.h
+iostream
+-
+vector
+-
+string
+-
+
+D:/Proyectos/C++/ExtraClase4/main.cpp
+array
+-
+iterator
+-
+cstdint
+-
+iostream
+-
+Sha1.h
+D:/Proyectos/C++/ExtraClase4/Sha1.h
+
