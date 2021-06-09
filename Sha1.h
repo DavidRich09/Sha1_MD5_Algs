@@ -24,10 +24,10 @@ private:
 public:
 
     int S(unsigned int x, int n);
-    void append(string m);
-    void setW(vector<int> m, int n);
-    int ft(int t);
-    int Kt(int t);
+    void Agregar(string m);
+    void SetW(vector<int> m, int n);
+    int GetT(int t);
+    int GetK(int t);
     void AlgSha1(string text);
 
 };

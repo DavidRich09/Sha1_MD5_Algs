@@ -3,4 +3,4 @@ project(ExtraClase4)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(ExtraClase4 main.cpp Sha1.cpp Sha1.h)
+add_executable(ExtraClase4 main.cpp Sha1.cpp Sha1.h MD5.cpp MD5.h)
