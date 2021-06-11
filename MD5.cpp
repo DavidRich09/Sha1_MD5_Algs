@@ -7,6 +7,8 @@
 
 MD5::MD5(string message) {
 
+    this->message = message;
+
     a = 0x67452301, b = 0xefcdab89, c = 0x98badcfe, d =  0x10325476;
 
     s[sizeArray] = {
@@ -137,5 +139,6 @@ void MD5::Output() {
     string result;
     for(int i =0; i<4; i++)
         result.append(GetHex(buf[i]));
+    Files::AddMD5Hash(message, result);
     cout<<result<<endl;
 }

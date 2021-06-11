@@ -16,10 +16,13 @@
 #include <iostream>
 #include <cstring>
 #include <vector>
+#include "Files.h"
 
 using namespace std;
 
 class MD5 {
+private:
+    std::string message;
 
 public:
 

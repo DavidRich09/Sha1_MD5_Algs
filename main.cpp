@@ -1,4 +1,5 @@
-#include "SHA1.h"
+#include "Sha1.h"
+#include "MD5.h"
 
 using namespace std;
 
@@ -28,7 +29,13 @@ int main() {
                 cout << "Escriba la palabra que desea encriptar: \n";
                 cin >> text;
                 sha1->Run(text);
+
+            } else if (text == "2") {
+                cout << "Escriba la palabra que desea encriptar: \n";
+                cin >> text;
+                MD5* md5 = new MD5(text);
             }
+
         } else if (text == "2") {
             cout << "1. SHA1\n2. MD5\n";
             cin >> text;

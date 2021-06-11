@@ -2,7 +2,7 @@
  * @file SHA1.cpp contiene el código de los métodos de SHA1.
  */
 
-#include "SHA1.h"
+#include "Sha1.h"
 
 using namespace std;
 
