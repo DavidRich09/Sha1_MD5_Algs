@@ -1,36 +1,35 @@
-//
-// Created by Richmond on 8/6/2021.
-//
-
-#ifndef EXTRACLASE4_SHA1_H
-#define EXTRACLASE4_SHA1_H
+/**
+ * @file SHA1.h contiene las declaraciones de los métodos y atributos de SHA1.
+ */
 
 #include<iostream>
 #include<vector>
 #include<string>
+#include <iomanip>
+#include <sstream>
+#include "Files.h"
 
-using namespace std;
-
-class Sha1 {
-
+class SHA1 {
 private:
+    std::vector<int> xVector;           // 8*64=512, cada elemento almacena 8 bits (int)
+    int W[80];                          // grupo de 32 bits
+    int pA, pB, pC, pD, pE;             // paquetes
+    int buffa1, buffb1, buffc1, buffd1, buffe1; // registros del búffer
+    int packets;                        // cantidad de paquetes encriptados
 
-    vector<int> X;//8*64=512, each subscript stores 8 bits
-    int W[80];//32 bits as a group
-    int A, B, C, D, E;
-    int A1, B1, C1, D1, E1;
-    int Turn;
+    int LShift(unsigned int x, int n);
+
+    void Add(std::string m);
+
+    void array(std::vector<int> m, int n);
+
+    int ft(int t);
+
+    int Kt(int t);
+
+    std::string getHashStr();
+
 
 public:
-
-    int S(unsigned int x, int n);
-    void Agregar(string m);
-    void SetW(vector<int> m, int n);
-    int GetT(int t);
-    int GetK(int t);
-    void AlgSha1(string text);
-
+    void Run(std::string text);
 };
-
-
-#endif //EXTRACLASE4_SHA1_H
