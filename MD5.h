@@ -5,7 +5,10 @@
 #ifndef EXTRACLASE4_MD5_H
 #define EXTRACLASE4_MD5_H
 
-#define sizeArray 64
+#include <iostream>
+#include <cstring>
+#include <vector>
+#include "math.h"
 
 #define F(x, y, z) (((x) & (y)) | ((~x) & (z)))
 #define G(x, y, z) (((x) & (z)) | ((y) & (~z)))
@@ -13,36 +16,27 @@
 #define I(x, y, z) ((y) ^ ((x) | (~z)))
 #define ROTATE_LEFT(x, n) (((x) << (n)) | ((x) >> (32-(n))))
 
-#include <iostream>
-#include <cstring>
-#include <vector>
-#include "Files.h"
+//#include "Files.h"
 
 using namespace std;
 
+
+
 class MD5 {
+public:
+    MD5(string inputString);
+    void Push();
+    void Hash(int N);
+    string GetHexadecimal(unsigned int num_str);
+    void Output();
+    ~MD5();
 private:
     std::string message;
-
-public:
-
-    MD5(string message);
-    void Push();
-    void Hash(int i);
-    string GetHex(unsigned int num);
-    void Output();
-
-private:
-
-    unsigned int x[16];
-    unsigned int a,b,c,d;
+    unsigned int X[16];
+    unsigned int A, B, C, D;
     vector<unsigned char> input;
     long long len;
     unsigned char n[8];
-    unsigned int t[sizeArray];
-    int s[sizeArray];
-
-
 };
 
 
