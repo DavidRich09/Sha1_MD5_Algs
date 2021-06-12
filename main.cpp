@@ -3,21 +3,13 @@
 
 using namespace std;
 
-void Test(){
-
-}
-
 int main() {
 
-//    Test();
 
     string text = "3";
     auto* sha1 = new SHA1;
 
-    auto* Md = new MD5("hola");
-
-
-/*    while (text != "0") {
+    while (text != "0") {
 
         cout << "En cualquier momento puede tocar 0 para salir.\n¿Desea encriptar o desencriptar?\n";
         cout << "1. Encriptar\n2.Desencriptar\n";
@@ -66,5 +58,5 @@ int main() {
             }
         }
     }
-    re*/ return 0;
+    return 0;
 }
