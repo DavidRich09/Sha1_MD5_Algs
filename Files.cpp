@@ -79,23 +79,21 @@ void Files::AddSHA1Hash(const std::string &word, const std::string &hash) {
 }
 
 std::string Files::SearchMD5Hash(std::string hash) {
-    std::string Files::SearchSHA1Hash(std::string hash) {
-        int position = NOT_STRING_POS_OR_LENGHT;
-        int length = NOT_STRING_POS_OR_LENGHT;
+    int position = NOT_STRING_POS_OR_LENGHT;
+    int length = NOT_STRING_POS_OR_LENGHT;
 
-        std::string line;
-        std::ifstream file ("../md5.txt");
-        if (file.is_open()) {
-            while (std::getline(file, line)) {
-                if (ContainsStr(line, hash, position, length)) {
-                    file.close();
-                    return line;
-                }
+    std::string line;
+    std::ifstream file("../md5.txt");
+    if (file.is_open()) {
+        while (std::getline(file, line)) {
+            if (ContainsStr(line, hash, position, length)) {
+                file.close();
+                return line;
             }
-        } else {} // couldn't open file
+        }
+    } else {} // couldn't open file
 
-        return std::string();
-    }
+    return std::string();
 }
 
 void Files::AddMD5Hash(const std::string &word, const std::string &hash) {
